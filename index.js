@@ -34,9 +34,12 @@ function quize() {
       if (answer.toLowerCase() === quizTopic[i].toLowerCase()) {
         console.log(chalk.magenta('Верно!'));
         score += 1;
-      } else console.log(chalk.red('Ты не прав!'));
+      } else {
+        console.log(chalk.red('Ты не прав!'));
+        console.log('Правильный ответ: ' + chalk.magenta(quizTopic[i]))
+      }
     }
-    console.log(`Твой результат: ${score}`);
+    console.log(`Твой результат: ${chalk.red(score)}`);
   } else {
     console.log('Такой темы нет. Выбери тему');
     quize();
