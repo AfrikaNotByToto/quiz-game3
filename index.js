@@ -6,13 +6,13 @@ const fs = require('fs');
 
 function massiv() {
   const arr = [];
-  const first = fs.readFileSync(
-    './topics/nighthawk_flashcard_data.txt',
-    'utf-8'
-  );
-  const arrArray = first.split('\n').filter((str) => str !== '');
-  arr.push(arrArray);
+  const files = fs.readdirSync('./topics', 'utf-8');
+  for (const file of files) {
+    const readfiles = fs.readFileSync(`./topics/${file}`, 'utf-8');
+    arr.push(readfiles.split('\n').filter((str) => str !== ''));
+  }
   return arr;
 }
+
 console.log(massiv());
 
