@@ -34,7 +34,10 @@ function quize() {
       if (answer.toLowerCase() === quizTopic[i].toLowerCase()) {
         console.log('Верно!');
         score += 1;
-      } else console.log('Ты не прав!');
+      } else {
+        console.log('Ты не прав!');
+        console.log('Правильный ответ: ' + quizTopic[i])
+      }
     }
     console.log(`Твой результат: ${score}`);
   } else {
