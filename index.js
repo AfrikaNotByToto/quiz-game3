@@ -1,3 +1,7 @@
+function compareRes(res, ans) {
+    return res.toLowerCase() === ans.toLowerCase();
+}
+
 const fs = require('fs');
 
 function massiv() {
@@ -11,3 +15,4 @@ function massiv() {
   return arr;
 }
 console.log(massiv());
+
