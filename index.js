@@ -5,7 +5,7 @@ const chalk = require('chalk');
 function getQuestions() {
   const arr = [];
   const files = fs.readdirSync('./topics', 'utf-8');
-  for(const file of files) {
+  for (const file of files) {
     const readfiles = fs.readFileSync(`./topics/${file}`, 'utf-8');
     arr.push(readfiles.split('\n').filter((str) => str !== ''));
   }
@@ -36,7 +36,7 @@ function quize() {
         score += 1;
       } else {
         console.log(chalk.red('Ты не прав!'));
-        console.log('Правильный ответ: ' + chalk.magenta(quizTopic[i]))
+        console.log(`Правильный ответ: ${chalk.magenta(quizTopic[i])}`);
       }
     }
     console.log(`Твой результат: ${chalk.red(score)}`);
