@@ -36,7 +36,7 @@ function quize() {
         score += 1;
       } else {
         console.log(chalk.red('Ты не прав!'));
-        console.log('Правильный ответ: ' + chalk.magenta(quizTopic[i]))
+        console.log(`Правильный ответ: ${chalk.magenta(quizTopic[i])}`);
       }
     }
     console.log(`Твой результат: ${chalk.red(score)}`);
