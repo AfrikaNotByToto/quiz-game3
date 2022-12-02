@@ -5,7 +5,7 @@ const chalk = require('chalk');
 function getQuestions() {
   const arr = [];
   const files = fs.readdirSync('./topics', 'utf-8');
-  for(const file of files) {
+  for (const file of files) {
     const readfiles = fs.readFileSync(`./topics/${file}`, 'utf-8');
     arr.push(readfiles.split('\n').filter((str) => str !== ''));
   }
