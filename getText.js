@@ -1,4 +1,4 @@
-const rl = require('readline');
+const rl = require('readline-sync');
 const fs = require('fs');
 
 console.log('Добро пожаловать на  Квиз!\n');
